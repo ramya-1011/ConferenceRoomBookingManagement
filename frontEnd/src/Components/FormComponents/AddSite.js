@@ -99,32 +99,7 @@ const validateCityId = (cityId) => {
             toast.error("All fields are required!");
             return false;
         }}
-    //      if(!/^[a-zA-Z0-9]*$/.test(siteId)){
-    //         toast.error("site id can only contain letters or numbers");
-    //         return false;
-    //      }if(siteId.length>10)  {
-    //         toast.error("site length cannot exceed 10 characters");
-    //         return false;
-    //      }
-    //      if(description.length>15){
-    //         toast.error("description length cannot exceed 15 characters");
-    //         return false;
-    //      }
-        
-    //     if (!/^\d{6}$/.test(pinCode)) {
-    //         toast.error("Invalid Pin Code. It should be 6 digits.");
-    //         return false;
-    //     }
-    //     if (!validateNumber(totalFloors)) {
-    //         toast.error("Total Floors should be a number.");
-    //         return false;
-    //     }
-    //     if (cityId === "") {
-    //         toast.error("Please select a city.");
-    //         return false;
-    //     }
-    //     return true;
-    // };
+    
 
     const postSite = (event) =>{
         
