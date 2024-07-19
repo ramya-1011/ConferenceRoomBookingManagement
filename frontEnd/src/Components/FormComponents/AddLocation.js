@@ -99,33 +99,7 @@ const AddLocation = () => {
        
     }
             
-            // LocationServices.addLocation(currentData)
-            //     .then((response) => {
-            //         toast.success("City created successfully!");
-            //         if (response.status === 200) {
-            //             setCurrentData(initialCityData);
-                         
-            //             navigate('/LocationList')
-            //         }
-            //     })
-            //     .catch((error) => {
-            //         console.log("error", error);
-            //         if (error.response && error.response.status === 400) {
-            //             const errorResponse = error.response.data;
-            //             if (errorResponse.errorState) {
-            //                 setErrors({});
-            //                 Object.keys(errorResponse.errorState).forEach((key) => {
-            //                     const errorMessage = errorResponse.errorState[key][0];
-            //                     setErrors((prevErrors) => ({
-            //                         ...prevErrors,
-            //                         [key]: errorMessage,
-            //                     }));
-            //                 });
-            //             } else {
-            //                 setErrors({});
-            //             }
-            //         }
-            //     });
+            
              
             const stateOptions = State.getStatesOfCountry("IN").map(item => ({ value: item.isoCode, label: item.name }));
             const cityOptions = currentData.state
