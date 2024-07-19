@@ -39,19 +39,9 @@ import SiteServices from '../Service/SiteService';
             console.error('error loading locations',error);
             toast.error('failed to load locations');
         }
-    
-    } 
-    // const deleteLocation = async(id) => {
-    //   if(window.confirm("Are you sure you want to delete Location?")){
-    //     const result = await LocationServices.deleteLocation(id);
-
-    //     toast.success('location deleted successfully');
-    //     loadlocation(); 
-    //   }
-     
-    // } 
+   
  
-    // Define forceDeleteCity outside of deleteLocation
+   
     const forceDeleteCity = async (cityId) => {
       try {
         const response = await LocationServices.forceDeleteLocation(cityId);
