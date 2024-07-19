@@ -105,13 +105,7 @@ const AddBooking = () => {
         }
         return '';
       }
-      // const validateBookingDate = (bookingDate) => {
-      //   if(!bookingDate){
-      //     return "Date is required"
-      //   }
-          
-      //   return '';
-      // };
+      
       const validateBookingDate = (bookingDate) => {
         if (!bookingDate) {
           return "Date is required";
@@ -122,7 +116,7 @@ const AddBooking = () => {
         // Create a Date instance for the current date
         const currentDate = new Date();
       
-        // Set the time of both dates to 00:00:00 for accurate comparison
+        
         bookingDateInstance.setHours(0, 0, 0, 0);
         currentDate.setHours(0, 0, 0, 0);
       
@@ -152,59 +146,7 @@ const AddBooking = () => {
       
     
    
-    
-    
-//  const saveBooking = (event) => {
-//     event.preventDefault();
-//         const { employeeId,employeeName,employee_ph_no,attendees,bookingDate,startTime,endTime
-//          } = currentData;
-//         const newErrors = {};
-    
-//         newErrors.employeeId = validateEmployeeId( employeeId);
-//         newErrors.employeeName = validateEmployeeName( employeeName);
-//         newErrors.employee_ph_no = validatePhoneNumber(employee_ph_no );
-//         newErrors.attendees = validateAttendees( attendees);
-//        newErrors.bookingDate=validateBookingDate(bookingDate);
-//       //  newErrors.startTime=validateStartTime(startTime);
-//       //  newErrors.endTime=validateEndTime(endTime);
-         
-       
-   
-//         setErrors(newErrors);
-//         if (Object.values(newErrors).every(error => error === '')) {
-//             console.log(' booking added successfully:', currentData);
-//              RoomServices.addBooking(currentData).then((response)=>{
-//                 toast.success("Floor added successfully!");
-//                 if(response.status === 200){
-//                     setCurrentData(initialBookingData);
-//                     console.log(response.data);
-//                     navigate('/BookingList')
-//                 }
-//             }).catch((error)=>{
-//                 console.log("error", error)
-//                 toast.error(error.response.data.message);
-//             })
-//         } else {
-//             console.log('Form has errors. Please correct them.');
-//         }
-     
-// };
-// const Booking = () => {
-//     if (!validateInputs()) return;
-
-//     RoomServices.addBooking(currentData)
-//         .then((response) => {
-//             toast.success("Booking successful!");
-//             setCurrentData(initialBookingData); // Clear form after successful submission
-//         })
-//         .catch((error) => {
-//             if (error.response && error.response.data.errors) {
-//                 seterrors(error.response.data.errors);
-//             } else {
-//                 toast.error("Failed to save booking.");
-//             }
-//         });
-// };
+ 
 
 const  saveBooking = (event) =>{
   event.preventDefault();
