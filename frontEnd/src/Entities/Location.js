@@ -189,7 +189,7 @@ const handleNameChange = (selectedOption) => {
         
         {location.length > 0 ? (
             <>
-            <thead style={{backgroundColor:"#1976d2",height:"40px", verticalAlign:"middle"}}>
+            <thead style={{backgroundColor:"#1976d2",height:"40px", textAlign: "center", verticalAlign:"middle"}}>
                 <th  > S.No</th>
                 <th  >City Name</th>
                 <th  >State</th> 
