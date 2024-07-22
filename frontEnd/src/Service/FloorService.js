@@ -5,7 +5,7 @@ const addFloor = (data) => {
  
 
 const deleteFloor = (id) => {
-    return commonURL.delete(`/floor/delete/${id}`);
+    return commonURL.delete(`/floor/force/${id}`);
 };
  
 const getFloor = (id) => {

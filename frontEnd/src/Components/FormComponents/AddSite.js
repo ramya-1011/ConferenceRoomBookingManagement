@@ -156,7 +156,7 @@ const validateCityId = (cityId) => {
                 <h2 className='text-center' style={{ fontWeight: 'bold' }}>ADD SITE</h2>
                 <Form>
                     <Form.Group className='mb-3'>
-                        <Form.Label>City</Form.Label>
+                        <Form.Label>City:</Form.Label>
                         <Form.Control as='select' value={currentData.cityId} onChange={handleInputChange} name='cityId'>
                             <option>--Select City--</option>
                             {viewCityData.map((item) => (
@@ -167,7 +167,7 @@ const validateCityId = (cityId) => {
                     </Form.Group>
 
                     <Form.Group className='mb-3'>
-                        <Form.Label>Site ID</Form.Label>
+                        <Form.Label>Site ID:</Form.Label>
                         <Form.Control
                             type='text'
                             name='siteId'
@@ -180,7 +180,7 @@ const validateCityId = (cityId) => {
                     </Form.Group>
 
                     <Form.Group className='mb-3'>
-                        <Form.Label>Description</Form.Label>
+                        <Form.Label>Description:</Form.Label>
                         <Form.Control
                             type='text'
                             name='description'
@@ -193,7 +193,7 @@ const validateCityId = (cityId) => {
                     </Form.Group>
 
                     <Form.Group className='mb-3'>
-                        <Form.Label  >Pin Code</Form.Label>
+                        <Form.Label  >Pin Code:</Form.Label>
                          
 
                         <Form.Control
@@ -207,11 +207,13 @@ const validateCityId = (cityId) => {
                         
                         {errors.pinCode && <span style={{ display: "flex", color: "red" }}>{errors.pinCode}</span>}
                     </Form.Group>
-
-                    <Button variant='success' onClick={postSite}>Save</Button>{' '}
+                   
+                            <div style={{ display: 'flex', justifyContent: 'center' }}> 
+                    <Button variant='success' onClick={postSite} style={{ marginRight: '10px' }}>Save</Button>{' '}
                     <Link to='/siteList'>
                         <Button variant='danger'>Cancel</Button>
                     </Link>
+                    </div>
                 </Form>
                 </Card.Body>
          </Card>

@@ -89,16 +89,14 @@ const AddBooking = () => {
       const validateEmployeeId = (employeeId) => {
         if (! employeeId) {
           return 'Employee Id is required';
-        }else if(parseInt(employeeId) <= 0){
-            return 'attendees must be greater than 0'
-        }else if (!/^\d+$/.test(employeeId)) {
-            return 'Id can only contain digits';
+        } else if (!/^\d+$/.test(employeeId)) {
+            return ' Employee Id can only contain digits';
           }
         return '';
       };
       const validateEmployeeName=(employeeName)=>{
         if(!employeeName){
-          return "name is required"
+          return "Employee Name is required"
         }
         else if (!/^[a-zA-Z\s]+$/.test(employeeName)) {
           return 'Name should only contain alphabetic characters';
@@ -190,7 +188,7 @@ const  saveBooking = (event) =>{
          <Card>
           <Card.Body>
              
-                <h2 className='text-center' style={{ fontWeight: 'bold' }}>ADD ROOM</h2>
+                <h2 className='text-center' style={{ fontWeight: 'bold' }}>ADD BOOKING</h2>
                 <Form>
                      
                    
@@ -257,19 +255,7 @@ const  saveBooking = (event) =>{
                         
                         {errors.attendees && <span style={{ display: "flex", color: "red" }}>{errors.attendees}</span>}
                     </Form.Group> 
-
-                    <Form.Group className='mb-3'>
-                        
-                        <Form.Control
-                            type='text'
-                            name='description'
-                            value={currentData.description}
-                            onChange={handleInputChange}
-                            maxLength={20}
-                            placeholder='Enter Description'
-                        />
-                        {errors.description && <span style={{ display: "flex", color: "red" }}>{errors.description}</span>}
-                    </Form.Group>
+ 
                     <Form.Group className='mb-3'>
                        
                         <Form.Control
@@ -308,12 +294,12 @@ const  saveBooking = (event) =>{
                     </Form.Group>
                     
                           
-
+                    <div style={{ display: 'flex', justifyContent: 'center' }}> 
                    
-                    <Button variant='success'  onClick={saveBooking}>Save</Button>{' '}
+                    <Button variant='success'  onClick={saveBooking} style={{ marginRight: '10px' }}>Save</Button>{' '}
                     <Link to='/RoomsList'>
                         <Button variant='danger'>Cancel</Button>
-                    </Link>
+                    </Link></div>
                 </Form>
                 </Card.Body>
          </Card>

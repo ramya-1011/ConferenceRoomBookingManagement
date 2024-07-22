@@ -233,7 +233,7 @@ const AddRoom = () => {
                     
 
                     <Form.Group className='mb-3'>
-                        <Form.Label>Description</Form.Label>
+                        <Form.Label>Description:</Form.Label>
                         <Form.Control
                             type='text'
                             name='description'
@@ -261,11 +261,11 @@ const AddRoom = () => {
                         
                         {errors.capacity && <span style={{ display: "flex", color: "red" }}>{errors.capacity}</span>}
                     </Form.Group> 
-
-                    <Button variant='success' onClick={postRoom}>Save</Button>{' '}
+                    <div style={{ display: 'flex', justifyContent: 'center' }}> 
+                    <Button variant='success' onClick={postRoom} style={{ marginRight: '10px' }}>Save</Button>{' '}
                     <Link to='/RoomsList'>
                         <Button variant='danger'>Cancel</Button>
-                    </Link>
+                    </Link></div>
                 </Form>
                 </Card.Body>
          </Card>

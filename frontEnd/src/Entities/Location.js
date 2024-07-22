@@ -9,8 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { MdEditLocationAlt } from "react-icons/md";
 import IconButton from "@mui/material/IconButton"; 
-import DeleteIcon from "@mui/icons-material/Delete";
-import { ErrorMessage } from 'formik';
+import DeleteIcon from "@mui/icons-material/Delete"; 
 import Form from "react-bootstrap/Form";   
 
 import Select from 'react-select';
@@ -40,7 +39,7 @@ import SiteServices from '../Service/SiteService';
             toast.error('failed to load locations');
         }
    
- 
+      }
    
     const forceDeleteCity = async (cityId) => {
       try {
@@ -66,12 +65,11 @@ const deleteLocation = async (id) => {
   try {
     const response = await LocationServices.deleteLocation(id);
     toast.success('City deleted successfully.');
-    loadlocation(); // Reload the locations to update the UI
+    loadlocation(); 
   } catch (error) {
     if (error.response && error.response.status === 409) {
       console.log(error.response);
-      if (window.confirm(error.response.statusText || "This city has active bookings. Do you still want to delete it?")) {
-        // Call forceDeleteCity here when the user confirms
+      if (window.confirm(error.response.statusText || "This city has active bookings. Do you still want to delete it?")) { 
         await forceDeleteCity(id);
       }
     } else {
@@ -179,7 +177,7 @@ const handleNameChange = (selectedOption) => {
  
   return (
     <div  style={{ width: '80%', margin: '20px auto' }} >
-        <h2 style={{ fontWeight: 'bold' }}>Cities We are Available At.!</h2>
+        <h2 style={{ fontWeight: 'bold' }}>Cities-we are available at.!</h2>
         <div className="button-container"  >
             <Link to="/add-Location">
                     <Button variant="primary">Add Location</Button>
@@ -229,7 +227,7 @@ const handleNameChange = (selectedOption) => {
             </tbody>
             </>
           ):(
-            <p style={{fontWeight: "bold"}}>No Record Found</p>
+            <p style={{fontWeight: "bold", textAlign: "center"}}>No Cities Found</p>
           )}
         
             <div  style={{display:'table-caption', width: '80%', margin: '20px auto'}}>

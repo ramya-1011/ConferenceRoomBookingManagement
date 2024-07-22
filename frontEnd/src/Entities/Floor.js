@@ -245,7 +245,7 @@ export default function Floor() {
           </Form.Select>
         </Form.Group>
         
-          <Button variant="info" className="reset-button mb-3" onClick={resetFilters}>
+          <Button variant="primary " className="reset-button mb-3" onClick={resetFilters}>
             Reset Filters
           </Button>
         </div>

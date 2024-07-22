@@ -178,11 +178,12 @@ const AddFloor = () => {
                     
 
                   
-
-                    <Button variant='success' onClick={addFloor}>Save</Button>{' '}
+                    
+                            <div style={{ display: 'flex', justifyContent: 'center' }}> 
+                    <Button variant='success' onClick={addFloor} style={{ marginRight: '10px' }}>Save</Button>{' '}
                     <Link to='/FloorsList'>
                         <Button variant='danger'>Cancel</Button>
-                    </Link>
+                    </Link></div>
                 </Form>
                 </Card.Body>
          </Card>

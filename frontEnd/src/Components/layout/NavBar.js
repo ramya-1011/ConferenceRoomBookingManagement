@@ -56,7 +56,7 @@ function NavBar  ()  {
             <li className="nav-item">
               <NavLink className="nav-link" aria-current="page" exact to="/LocationList"><IconButton>
               <IoLocationSharp /></IconButton>
-                Cities !
+                Cities
               </NavLink>
             </li>  
             {/* <li className="nav-item">
@@ -84,7 +84,7 @@ function NavBar  ()  {
     </div> 
     <Dropdown>
       <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-      <TfiMenuAlt />
+       
         MENU
       </Dropdown.Toggle>
 

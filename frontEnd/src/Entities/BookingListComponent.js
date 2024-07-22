@@ -133,7 +133,7 @@ const deleteBooking = async (id) => {
          </tbody>
          </>
         ):(
-            <p style={{fontWeight: "bold"}}>No Bookings Found</p>
+            <p style={{fontWeight: "bold",textAlign:'center'}}>No Bookings Found!</p>
           )}
      </Table>
       <ToastContainer/>

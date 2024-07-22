@@ -92,10 +92,7 @@ const AddLocation = () => {
                 console.log("error", error)
                 toast.error(error.response?.data.message);
             })
-        } 
-        // else {
-        //     console.log('Form has errors. Please correct them.');
-        // }
+        }  
        
     }
             
@@ -115,7 +112,7 @@ const AddLocation = () => {
     <div className='container mt-5 mb-5'>
             <div className='row'>
                 <div className='card col-md-6 offset-md-3'>
-                    <h2 className='text-center' style={{fontWeight:"bold"}}> ADD CITY</h2>
+                    <h2 className='text-center' style={{fontWeight:"bold", textAlign: "center"}}> ADD CITY</h2>
                     <div className='card-body'>
                             <div className='form-group mb-2'> 
                                 <Form>
@@ -146,25 +143,12 @@ const AddLocation = () => {
                                     <span style={{ display: "flex", color: "red" }}>{errors.name}</span>
                                 </Form.Group>
                                 </Form>
-                                {/* <Form>
-                                    <Form.Group className="mb-3" controlId="formTaskName">
-                                    {/* <Form.Label>{("City Name")}</Form.Label> */}
-                                    {/* <Form.Control
-                                        required
-                                        type="text"
-                                        placeholder="Enter total Sites"
-                                        name="totalSites"
-                                        value={currentData.totalSites}
-                                            onChange={handleInputChange}/>
-                                        <Form.Control.Feedback type="invalid">
-                                        {errors.totalSites}
-                                    </Form.Control.Feedback>
-                                    <span style={{display: "flex", color: "red"}}>{errors.totalSites}</span>
-                                    </Form.Group>  
-                                </Form> */} 
+                                 
                             </div>
-                            <button onClick={addLocation} className='btn btn-success'>Save</button> {" "}
+                            <div style={{ display: 'flex', justifyContent: 'center' }}> 
+                            <button  onClick={addLocation} className='btn btn-success ' style={{ marginRight: '10px' }} >Save</button> {"  "}
                             <Link to={"/LocationList"} className='btn btn-danger' href='/'>Cancel</Link>
+                            </div>
                     </div>
                 </div>
             </div>
