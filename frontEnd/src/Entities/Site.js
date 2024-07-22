@@ -299,7 +299,7 @@ const validateCityId = (cityId) => {
         </tbody>
         </>
         ):(
-            <p style={{fontWeight: "bold"}}>No Record Found</p>
+            <p style={{fontWeight: "bold",textAlign: "center"}}>No Sites Found</p>
           )}
         <div
           style={{

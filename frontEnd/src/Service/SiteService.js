@@ -5,7 +5,7 @@ const addSite = (data) => {
  
 
 const deleteSite = (id) => {
-    return commonURL.delete(`/site/delete/${id}`);
+    return commonURL.delete(`/site/force/${id}`);
 };
  
 const getSite = (id) => {

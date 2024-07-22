@@ -255,7 +255,7 @@ export default function Floor() {
             <>
    <thead  style={{ backgroundColor: "#1976d2", height: "40px", textAlign: "center", verticalAlign:"middle"}}>
          
-            <th scope="row"  >Id</th>
+            <th scope="row"  >S.No</th>
             <th scope="row"  >Floor Id</th> 
             <th scope="row" >Location Name</th>
             <th scope="row" >Site</th>
@@ -295,7 +295,7 @@ export default function Floor() {
         </tbody>
         </>
         ):(
-            <p style={{fontWeight: "bold"}}>No Record Found</p>
+            <p style={{fontWeight: "bold",textAlign: "center"}}>No Floors Found</p>
           )}
       </Table>
        

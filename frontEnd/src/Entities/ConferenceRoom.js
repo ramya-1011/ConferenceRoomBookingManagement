@@ -415,7 +415,7 @@ const [roomToDelete, setRoomToDelete] = useState(null);
         </tbody>
         </>
         ):(
-            <p style={{fontWeight: "bold"}}>No Record Found</p>
+            <p style={{fontWeight: "bold",textAlign: "center"}}>No Rooms Found</p>
           )}
       </Table>
        

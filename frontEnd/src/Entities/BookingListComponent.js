@@ -37,7 +37,8 @@ const deleteBooking = async (id) => {
     if(window.confirm("Are you sure you want to delete Booking?")){
     const result = await BookingServices.deleteBooking(id);
     toast.success("booking deleted Successfully!");
-            
+    setBookings(bookings.filter(booking=>booking.bookingID !== id));
+    setRecords(records.filter(record=>record.bookingID!== id));      
     }                              
   };
   const Filter=(e)=>{
@@ -65,7 +66,7 @@ const deleteBooking = async (id) => {
      <Table stripped bordered hover variant="light"  >
      {bookings.length > 0 ? (
             <>
-         <thead style={{backgroundColor:"#35979cb0",height:"50px"}}>
+         <thead style={{backgroundColor:"#35979cb0",height:"50px",textAlign: "center",verticalAlign:"middle"}}>
              <th scope="row" style={{textAlign:"center"}}> Booking Id   </th>
              <th scope="row" style={{textAlign:"center"}}> Room Id </th>
              <th scope="row" style={{textAlign:"center"}}>Employee Name </th>
@@ -85,7 +86,7 @@ const deleteBooking = async (id) => {
              { 
                     records.map((row) =>
                  (
-                     <tr key={row.id}>
+                     <tr key={row.id} style={{   height: "40px",  textAlign: "center",verticalAlign:"middle"}}>
                          <td component="th" scope="row" style={{textAlign:"center"}}>
                              {row.bookingID}
                          </td>
