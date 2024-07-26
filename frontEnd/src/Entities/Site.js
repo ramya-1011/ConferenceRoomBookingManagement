@@ -186,7 +186,7 @@ const validateCityId = (cityId) => {
         const updatedData = { ...currentData, cityId: currentData.city?.id }; //... spread operator stores data
         SiteServices.updateSite(currentData.id,updatedData)
       .then((response) => {
-        toast.success("Site details Updated successfully!!!");
+        toast.success("Site details updated successfully!!!");
         if (response.status === 200) {
           console.log(response.data);
           handleClose();

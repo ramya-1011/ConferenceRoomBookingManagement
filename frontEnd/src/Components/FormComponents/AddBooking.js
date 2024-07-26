@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom'; 
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import RoomServices from '../../Service/RoomService'; 
+import RoomServices from '../../Service/RoomService.js'; 
 import {Container,Row,Col,Card,Button, CardBody} from 'react-bootstrap';
 import Form from "react-bootstrap/Form"; 
  
@@ -68,21 +68,19 @@ const AddBooking = () => {
     }
     const validateAttendees = (attendees) => {
         if (! attendees) {
-          return 'This feild is required';
+          return ' Number of Attendees is required';
         }else if(parseInt(attendees) <= 0){
             return 'attendees must be greater than 0'
         }else if (!/^\d+$/.test(attendees)) {
-            return 'this field can only contain digits';
+            return 'Attendees can only be in Numbers';
           }
         return '';
       };
       const validatePhoneNumber = (employee_ph_no) => {
         if (! employee_ph_no) {
-          return 'This feild is required';
-        }else if(parseInt(employee_ph_no) <= 0){
-            return 'attendees must be greater than 0'
-        }else if (!/^\d+$/.test(employee_ph_no)) {
-            return 'this field can only contain digits';
+          return 'Phone Number is required';
+        } else if (!/^\d+$/.test(employee_ph_no)) {
+            return 'Phone Number can only contain digits';
           }
         return '';
       };
@@ -98,7 +96,7 @@ const AddBooking = () => {
         if(!employeeName){
           return "Employee Name is required"
         }
-        else if (!/^[a-zA-Z\s]+$/.test(employeeName)) {
+        else if (!/^[a-zA-Z\-]+$/.test(employeeName)) {
           return 'Name should only contain alphabetic characters';
         }
         return '';

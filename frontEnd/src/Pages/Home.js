@@ -38,7 +38,7 @@ import { Link } from 'react-router-dom';
         <div className='card shadow'>
         <img src={image_focus} className='w-100 border-bottom' alt='services'/>
         <div className='card-body'>
-          <h5  > Service 1</h5>
+          <h5 className= 'mx-auto text-center'> Service 1</h5>
           <div className='underline  mx-auto text-center' ></div>
           <h6> Easy Room Selection</h6>
           
@@ -50,7 +50,7 @@ import { Link } from 'react-router-dom';
         <div className='card shadow'>
         <img src={image_meeting} className='w-100 border-bottom' alt='services'/>
         <div className='card-body'>
-          <h5  > Service 2 </h5>
+          <h5  className= 'mx-auto text-center'> Service 2 </h5>
           <div className='underline  mx-auto text-center' ></div>
           <h6> Real-Time Availability</h6>
           
@@ -64,9 +64,9 @@ import { Link } from 'react-router-dom';
         <div className='card shadow'>
         <img src={img5} className='w-100 border-bottom' alt='services'/>
         <div className='card-body'>
-          <h6  > Service 3</h6>
+          <h5 className= 'mx-auto text-center'  > Service 3</h5>
           <div className='underline mx-auto'></div>
-          <h6> Enhance Collaboration</h6>
+          <h6 className= 'mx-auto text-center'> Enhance Collaboration</h6>
           <p> By providing a reliable and efficient way to book conference rooms, our app supports better planning and more effective collaboration among teams.</p>
           </div>
           </div>

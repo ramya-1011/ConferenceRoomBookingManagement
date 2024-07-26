@@ -2,6 +2,7 @@
   "name": "crb_trail",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -11,6 +12,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
+    "babel-jest": "^29.7.0",
     "bootstrap": "^5.3.3",
     "country-state-city": "^3.2.1",
     "react": "^18.3.1",
@@ -31,6 +33,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "^axios$": "axios/dist/node/axios.cjs"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -50,6 +57,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/preset-env": "^7.24.8",
+    "@babel/preset-react": "^7.24.7"
   }
 }
