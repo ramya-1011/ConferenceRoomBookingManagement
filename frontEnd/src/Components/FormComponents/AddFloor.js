@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import LocationServices from '../../Service/LocationService';
 import SiteServices from '../../Service/SiteService';
 import FloorServices from '../../Service/FloorService'; 
-import {Container,Row,Col,Card,Button, CardBody} from 'react-bootstrap';
+import {Container,Row,Col,Card,Button} from 'react-bootstrap';
  
  
 const AddFloor = () => {

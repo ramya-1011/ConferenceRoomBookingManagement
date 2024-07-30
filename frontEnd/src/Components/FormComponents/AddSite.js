@@ -60,14 +60,25 @@ const AddSite = () => {
     }
     return '';
   };
+  // const validateDescription = (description) => {
+  //   if (!description) {
+  //     return 'Description is required';
+  //   } else if (!/^[a-zA-Z0-9\s-]+$/.test(description)) {
+  //     return 'Description can only contain letters, numbers and hyphens';
+  //   }
+  //   return '';
+  // };
   const validateDescription = (description) => {
     if (!description) {
-      return 'Description is required';
+        return 'Description is required';
     } else if (!/^[a-zA-Z0-9\s-]+$/.test(description)) {
-      return 'Description can only contain letters, numbers and hyphens';
+        return 'Description can only contain letters, numbers, spaces, and hyphens';
+    } else if (/^\s/.test(description)) {
+        return 'Description cannot start with a space';
     }
     return '';
-  };
+};
+
   
   const validatePinCode = (pinCode) => {
     if (!pinCode) {

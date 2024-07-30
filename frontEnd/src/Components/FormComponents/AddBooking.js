@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import RoomServices from '../../Service/RoomService.js'; 
-import {Container,Row,Col,Card,Button, CardBody} from 'react-bootstrap';
+import {Container,Row,Col,Card,Button} from 'react-bootstrap';
 import Form from "react-bootstrap/Form"; 
  
 const AddBooking = () => {
